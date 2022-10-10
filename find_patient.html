@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Find patient</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .left {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+            background: #232530;
+        }
+
+        .img {
+            position: absolute;
+            width: 95px;
+            height: 84px;
+            left: 78px;
+            top: 75px;
+            background: #D9D9D9;
+        }
+
+        .name {
+            position: absolute;
+            left: 62px;
+            top: 190px;
+            font-family: 'Times New Roman';
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 55px;
+            color: #FFFFFF;
+        }
+
+        ul {
+            list-style-type: none;
+            left: 30px;
+            top: 320px;
+            position: fixed;
+            font-weight: 200;
+            font-size: 23px;
+            line-height: 46px;
+        }
+
+        li a {
+            display: block;
+            padding: 35px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .main {
+            margin-left: 160px;
+            font-size: 28px;
+            padding: 0px 10px;
+        }
+
+        .center {
+            margin-left: 200px;
+            margin-top: 83px;
+        }
+
+        .search {
+            margin-top: 2%;
+            margin-left: 70%;
+        }
+
+        input[type="text"] {
+            width: 200px;
+            height: 40px;
+            font-size: 24px;
+        }
+
+        table {
+            margin-top: 50px;
+            margin-left: -60px;
+            border-spacing: 0px;
+            width: 100%;
+        }
+
+        .table td,
+        .table th {
+            padding: 0.75em;
+            vertical-align: top;
+            text-align: center;
+            border-top: 1px solid black;
+        }
+
+        .table td>a.btn {
+            padding: 0.3em 1em;
+            font-size: 1.1em;
+            margin: 0.2em;
+        }
+
+        .text-gradient {
+            font-size: larger;
+        }
+
+        .history {
+            color: rgb(254, 201, 132);
+        }
+
+        .receipt {
+            color: black;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .li a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left">
+        <div class="img"></div>
+        <div class="name">User name</div>
+        <ul>
+            <li><a href="add_patient.html">Add patient</a></li>
+            <li><a href="find_patient.html">Find patient</a></li>
+            <li style="left:-15px; position:relative;"><a href="">Leave certificate</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="center">
+            <h2>Patients</h2>
+            <div class="search">
+                <label for="search">Search</label>
+                <input type="text">
+            </div>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Reg. No</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>History</th>
+                        <th>Receipt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Misari Gami</td>
+                        <td>20</td>
+                        <td>Female</td>
+                        <td><a href="history.html"><span class="text-gradient history"><i
+                                        class="fa-sharp fa-solid fa-file-medical"></i></span></a></td>
+                        <td><a href="receipt.html"><span class="text-gradient receipt"><i
+                                        class="fa-solid fa-receipt"></i></span></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
